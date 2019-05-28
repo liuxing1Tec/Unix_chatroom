@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/client.out.dir/cli/src/chatcli.c.o CMakeFiles/client.out.dir/cli/main.c.o  -o client.out 

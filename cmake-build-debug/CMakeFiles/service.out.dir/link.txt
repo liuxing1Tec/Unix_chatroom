@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/service.out.dir/srv/src/chatsrv.c.o CMakeFiles/service.out.dir/srv/src/usrmgr.c.o CMakeFiles/service.out.dir/srv/main.c.o  -o service.out -lpthread 
