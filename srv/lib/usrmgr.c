@@ -1,4 +1,4 @@
-#include "../include/chatsrv.h"
+#include "../include/usrmgr.h"
 
 pClient head;
 

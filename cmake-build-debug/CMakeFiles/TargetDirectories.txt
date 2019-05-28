@@ -1,0 +1,4 @@
+/home/liuxing1/CodeFiles/Unix_chatroom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/liuxing1/CodeFiles/Unix_chatroom/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/liuxing1/CodeFiles/Unix_chatroom/cmake-build-debug/CMakeFiles/client.out.dir
+/home/liuxing1/CodeFiles/Unix_chatroom/cmake-build-debug/CMakeFiles/service.out.dir

@@ -37,7 +37,7 @@ void login(int fd, SOCKET peeraddr) {
         bzero(cli, sizeof(Client));
         cli->conn = fd;
         sprintf(cli->usrname, "%s", usrname);
-        sprintf(cli->IP, "%s", inet_ntoa(peeraddr.sin_addr));
+        sprintf(cli->IP, "%s", inet_ntoa(peeraddr.sin_addr));//arpa/inet.h
         cli->port = ntohs(peeraddr.sin_port);
         AddClient(cli);//初始化一个用户
         char initbuf[MSGLENGTH] = {};
@@ -107,7 +107,7 @@ void service() {
         if (CountConn() == MAXSIZE) {
             char *errStr = "The current connection is full, please connect later!";
             send(conn, errStr, strlen(errStr), 0);
-            close(conn);
+            close(conn);//unistd.h
         }
 
         login(conn, peeraddr);
@@ -126,4 +126,3 @@ void service() {
     ClearClient();
     printf("service close!\n");
 }
-
