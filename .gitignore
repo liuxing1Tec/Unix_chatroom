@@ -1,3 +1,4 @@
 cmake-bulid-debug/
 bin/
 Release
+.idea/
