@@ -12,6 +12,8 @@
     exit(EXIT_FAILURE);\
 } while(0)
 
+//#define INVALID_SOCKET -1
+
 typedef struct _Client {
     int conn;
     char usrname[20];
@@ -66,6 +68,4 @@ void ClearClient();
 /*
 * function  检查连接状态并关闭一个连接
 */
-void CheckConnection();
-
-#define INVALID_SOCKET -1
+//void CheckConnection();

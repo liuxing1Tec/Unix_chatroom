@@ -2,23 +2,23 @@
 
 pClient head;
 
-void InitLink() {
-    head = (pClient) malloc(sizeof(Client)); //创建一个头结点
+void InitLink() {                               //创建一个头结点
+    head = (pClient) malloc(sizeof(Client));
     if (head == NULL)
         ERR_EXIT("malloc");
     head->next = NULL;
 }
 
-pClient GetHeadNode() {
+pClient GetHeadNode() {                         //返回头指针
     return head;
 }
 
-void AddClient(pClient client) {
+void AddClient(pClient client) {                //将一个指针指向的用户结构体添加到用户链表，头插法
     client->next = head->next;
-    head->next = client;
+    head->next = client;                        //第一个用户，是最新连接的用户
 }
 
-void RemoveClient(int fd) {
+void RemoveClient(int fd) {                     //删除通过该套接口描述字连接的用户
     pClient p = head->next;
     pClient pre = head;
     while (p != NULL) {
@@ -32,7 +32,7 @@ void RemoveClient(int fd) {
     }
 }
 
-pClient FindClient(int fd) {
+pClient FindClient(int fd) {                    //查找通过该套接口描述字连接的用户，返回用户结构体指针
     if (0 == fd)
         return NULL;
     pClient p = head->next;
@@ -44,7 +44,7 @@ pClient FindClient(int fd) {
     return p;
 }
 
-int CountConn() {
+int CountConn() {                               //统计当前连接用户总量
     int count = 0;
     pClient p = head->next;
     while (p != NULL) {
@@ -54,7 +54,7 @@ int CountConn() {
     return count;
 }
 
-void ClearClient() {
+void ClearClient() {                            //清空用户空间
     pClient p = head->next;
     while (p != NULL) {
         head->next = p->next;

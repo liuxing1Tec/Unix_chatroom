@@ -2,10 +2,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/socket.h>
-//#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <pthread.h>//包含了time()相关函数
-//#include <errno.h>
 #include "usrmgr.h"
 
 #define ERR_EXIT(m)\
