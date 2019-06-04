@@ -12,7 +12,7 @@ void init() {
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(5188);
-    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);                   //服务器端要绑定一个本地套接口以供客户端做指定连接
+    servaddr.sin_addr.s_addr = inet_addr("172.30.1.200");           //服务器端要绑定一个本地套接口以供客户端做指定连接
     int on = 1;
     if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on)) < 0)
         ERR_EXIT("setsockopt");

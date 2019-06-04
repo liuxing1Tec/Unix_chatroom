@@ -20,7 +20,7 @@ void init() {
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(5188);
-    servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");              //连接到指定服务器，指定目的IP和端口号
+    servaddr.sin_addr.s_addr = inet_addr("172.30.1.200");           //连接到指定服务器，指定目的IP和端口号
 
     if (connect(sockfd, (SA *) &servaddr, sizeof(servaddr)) < 0)
         ERR_EXIT("connect");
