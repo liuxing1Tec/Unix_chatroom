@@ -15,7 +15,7 @@
 //#define SEND_OVER 1
 //#define SEND_WAIT 0
 #define MAXSIZE 10
-#define MSGLENGTH 100
+#define MSGLENGTH 1024
 typedef struct sockaddr SA;
 typedef struct sockaddr_in SOCKET;
 

@@ -20,7 +20,7 @@
     exit(EXIT_FAILURE);\
 } while(0)
 
-#define MSGLENGTH 100
+#define MSGLENGTH 1024
 
 typedef struct sockaddr SA;
 

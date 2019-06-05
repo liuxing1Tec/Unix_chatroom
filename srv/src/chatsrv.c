@@ -27,7 +27,8 @@ void init() {
 
 void login(int fd, SOCKET peeraddr) {
 
-    char usrname[20] = {};                              //登录时首先接收用户名
+    char usrname[1024];    				//登录时首先接收用户名
+    bzero(usrname, sizeof(usrname));
     int ret = recv(fd, usrname, sizeof(usrname), 0);    //相比read只多了一个flag标记，可以置0不管
     if (ret < 0)
         ERR_EXIT("recv");
