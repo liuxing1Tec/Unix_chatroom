@@ -16,7 +16,7 @@
 
 typedef struct _Client {
     int conn;
-    char usrname[20];
+    char usrname[1024];
     char IP[20];
     unsigned short port;
     struct _Client *next;
